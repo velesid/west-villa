@@ -1,0 +1,813 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0;
+}
+
+.wrapper-frame {
+    overflow-y: scroll;
+    background: #fff;
+}
+
+.house-main {
+    position: relative;
+}
+
+.images-selection {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.house-main > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.plan-title{
+    padding-top: 20px;
+}
+.plan-title, .plan-title-text, p, h2 {
+    color: #555;
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.plan-title:after {
+    content: '';
+    display: block;
+    /*background: transparent url(../library/photo/title-select.svg);*/
+    width: 165px;
+    height: 20px;
+    margin: 24px auto 0;
+}
+
+.plan {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0px 50px 0px;
+}
+
+.plan > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.plan > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.plan > svg .apartment {
+    fill: #fff;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+}
+
+.plan > svg .apartment:hover {
+    opacity: .5 !important;
+    fill: #fff;
+}
+
+.plan svg a text {
+}
+
+.selected-apartment {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.selected-apartment > .description{
+    width: 50%;
+    float: right;
+}
+
+.selected-apartment > img {
+    width: 35%;
+    height: auto;
+    margin-top: 25px;
+}
+
+.selected-apartment .description ul {
+    margin-top: 60px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #bfa381;
+}
+
+.selected-apartment .description .nav li {
+    display: block;
+    float: left;
+    position: relative;
+    transform: translateY(-100%);
+}
+
+:after, :before {
+    box-sizing: border-box;
+}
+
+.selected-apartment > .description > .nav-tabs li.active::before, .selected-apartment > .description > .nav-tabs li.active::after {
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 10px 0;
+    left: 50%;
+    position: absolute;
+    content: '';
+}
+
+.selected-apartment > .description > .nav-tabs li.active::before {
+    border-color: #bfa381 transparent transparent;
+    bottom: -8px;
+}
+
+.selected-apartment > .description > .nav-tabs li.active::after {
+    border-color: #fff transparent transparent;
+    bottom: -6.5px;
+}
+
+.selected-apartment > .description > .nav-tabs li a {
+    padding: 25px 33px;
+    color: #706666;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    line-height: 1;
+}
+
+.selected-apartment > .description > .tab-content {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+}
+
+.selected-apartment > .description > .tab-content > .tab-pane {
+    display: none;
+}
+
+.selected-apartment > .description > .tab-content > .tab-pane.active {
+    display: block;
+}
+
+.selected-apartment > .description > .tab-content > .tab-pane table {
+    display: table;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    color: rgb(102, 102, 102);
+    height: 149px;
+    width: 100%;
+    margin: 0 auto 0;
+}
+
+.selected-apartment > .description > .tab-content > .tab-pane table > tbody {
+    display: table-row-group;
+}
+
+table > tbody > tr > td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+
+.house-main > svg > a polygon {
+    fill: #fff;
+}
+
+/*Button select block*/
+.button-select {
+    width: 100%;
+    min-height: 1px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-select > .button-black {
+    width: 127px;
+    display: inline-block;
+    margin: 0 6px 3px;
+    text-decoration: none;
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+    border: 0;
+    background-color: rgba(68, 68, 68, 0.71);
+    color: #fff;
+    font-size: 16px;
+    transition: all .1s ease-in-out;
+}
+
+.button-black.active, .button-black:focus, .button-black:hover {
+    background-color: rgb(68, 68, 68);
+    transition: all .1s ease-in-out;
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(173, 169, 139);
+    bottom: 0;
+}
+.button-floor:hover{
+    opacity:.7;
+    cursor: pointer;
+    fill-opacity: .9;
+}
+.button-floor {
+    fill-opacity: 0;
+}
+.floor.active{
+    opacity:.7;
+}
+.content-plan{
+    margin: 70px 50px 0px;
+}
+.active{
+    fill-opacity: .9;
+}
+
+
+
+
+
+
+
+@media only screen   and (min-width: 990px) and (max-width: 1018px) {
+    ::-webkit-scrollbar-button {
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:6px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color:transparent;
+        box-shadow:0px 0px 3px #000 inset;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: rgba(130, 130, 130, 0.81);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: rgba(84, 84, 84, 0.59);
+        box-shadow:1px 1px 1px #fff inset;
+        background-image:url('http://www.west-villa.com.ua/wp-content/themes/structure/library/photo/scroll.png');
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+
+    ::-webkit-resizer{
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:7px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar{
+        width: 13px;
+    }
+    body{
+        padding: 30px;
+    }
+    .start-page{
+        width: 40px;
+        height: 40px;
+        background-color: #a87d41;
+    }
+    .start-page > img{
+        width: 20px;
+        height: 20px;
+        margin: 9px;
+    }
+    .button-select{
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        width: -webkit-fill-available;
+    }
+    .button-black{
+        letter-spacing: .2px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .button-select > .button-black {
+        font-size: 13px;
+        width: 110px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .plan-title{
+        padding-top: 0;
+        line-height: 0px;
+        margin-bottom: 0;
+        letter-spacing: .6px;
+        font-size: 22px;
+        height: 0;
+        margin-top: 52px;
+    }
+    .plan{
+        margin: 40px 44px 0px;
+        margin-top: 70px;
+    }
+    .content-plan{
+        margin: 10% 50px 0px;
+    }
+    .content-plan > div > div {
+        line-height: 0;
+        font-size: 22px;
+        letter-spacing: .6px;
+        margin-bottom: 20px;
+    }
+    .selected-apartment > img {
+        width: 74%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .selected-apartment > .description {
+        width: 100%;
+        display: block;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .copyright{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+    .selected-apartment > .description > .nav-tabs li a {
+        font-size: 13px;
+        padding: 15px 0px;
+    }
+    .selected-apartment > .description > .nav-tabs li:nth-child(2), .selected-apartment > .description > .nav-tabs li:nth-child(2) > a {
+        display: none;
+    }
+    .tab-content{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .floor-wrapper{
+        margin-top: 10%;
+    }
+}
+
+@media only screen   and (min-width: 482px) and (max-width: 989px) {
+    ::-webkit-scrollbar-button {
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:6px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color:transparent;
+        box-shadow:0px 0px 3px #000 inset;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: rgba(130, 130, 130, 0.81);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: rgba(84, 84, 84, 0.59);
+        box-shadow:1px 1px 1px #fff inset;
+        background-image:url('http://www.west-villa.com.ua/wp-content/themes/structure/library/photo/scroll.png');
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+
+    ::-webkit-resizer{
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:7px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar{
+        width: 13px;
+    }
+    body{
+        padding: 0 30px;
+    }
+    .start-page{
+        width: 40px;
+        height: 40px;
+        background-color: #000715;
+    }
+    .start-page > img{
+        width: 20px;
+        height: 20px;
+        margin: 9px;
+    }
+    .button-select{
+        margin-top: 30px;
+        margin-right: 20%;
+        margin-left: 20%;
+        width: -webkit-fill-available;
+    }
+    .button-black{
+        letter-spacing: .2px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .button-select > .button-black {
+        font-size: 13px;
+        width: 110px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .plan-title{
+        padding-top: 0;
+        line-height: 0px;
+        margin-bottom: 0;
+        letter-spacing: .6px;
+        font-size: 22px;
+        height: 0;
+        margin-top: 52px;
+    }
+    .plan{
+        margin: 40px 44px 0px;
+    }
+    .content-plan{
+        margin: 10% 50px 0px;
+    }
+    .content-plan > div > div {
+        line-height: 0;
+        font-size: 22px;
+        letter-spacing: .6px;
+        margin-bottom: 20px;
+    }
+    .selected-apartment > img {
+        width: 100%;
+    }
+    .selected-apartment > .description {
+        width: 100%;
+        display: block;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .copyright{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+    .selected-apartment > .description > .nav-tabs li a {
+        font-size: 13px;
+        padding: 15px 0px;
+    }
+    .selected-apartment > .description > .nav-tabs li:nth-child(2), .selected-apartment > .description > .nav-tabs li:nth-child(2) > a {
+        display: none;
+    }
+    .tab-content{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .floor-wrapper{
+        margin-top: 10%;
+    }
+
+}
+
+
+@media only screen   and (min-width: 393px) and (max-width: 481px) {
+    ::-webkit-scrollbar-button {
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:6px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color:transparent;
+        box-shadow:0px 0px 3px #000 inset;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: rgba(130, 130, 130, 0.81);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: rgba(84, 84, 84, 0.59);
+        box-shadow:1px 1px 1px #fff inset;
+        background-image:url('http://www.west-villa.com.ua/wp-content/themes/structure/library/photo/scroll.png');
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+
+    ::-webkit-resizer{
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:7px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar{
+        width: 13px;
+    }
+    body{
+        padding: 0;
+    }
+.start-page{
+    width: 40px;
+    height: 40px;
+    background-color: #a87d41;
+}
+.start-page > img{
+    width: 20px;
+    height: 20px;
+    margin: 9px;
+}
+.button-select{
+    margin-top: 30px;
+}
+.button-black{
+    letter-spacing: .2px;
+    font-weight: 300;
+    font-size: 16px;
+}
+.plan-title{
+    padding-top: 0;
+    line-height: 0px;
+    margin-bottom: 0;
+    letter-spacing: .6px;
+    font-size: 26px;
+    height: 0;
+    margin-top: 52px;
+}
+.plan{
+    margin: 40px 44px 0px;
+}
+.content-plan > div > div {
+    line-height: 0;
+    font-size: 26px;
+    letter-spacing: .6px;
+    margin-bottom: 20px;
+}
+    .selected-apartment > img {
+    width: 100%;
+    }
+    .selected-apartment > .description {
+        width: 100%;
+        display: block;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .copyright{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+    .selected-apartment > .description > .nav-tabs li a {
+        font-size: 13px;
+        padding: 15px 0px;
+    }
+    .selected-apartment > .description > .nav-tabs li:nth-child(2) {
+        margin-left: 24%;
+    }
+    .tab-content{
+        font-size: 17px;
+        font-weight: 500;
+    }
+}
+
+@media only screen   and (min-width: 318px) and (max-width: 392px) {
+    ::-webkit-scrollbar-button {
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:6px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color:transparent;
+        box-shadow:0px 0px 3px #000 inset;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: rgba(130, 130, 130, 0.81);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: rgba(84, 84, 84, 0.59);
+        box-shadow:1px 1px 1px #fff inset;
+        background-image:url('http://www.west-villa.com.ua/wp-content/themes/structure/library/photo/scroll.png');
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+
+    ::-webkit-resizer{
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:7px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar{
+        width: 13px;
+    }
+    body{
+        padding: 0;
+    }
+    .start-page{
+        width: 40px;
+        height: 40px;
+        background-color: #a87d41;
+    }
+    .start-page > img{
+        width: 20px;
+        height: 20px;
+        margin: 9px;
+    }
+    .button-select{
+        margin-top: 30px;
+    }
+    .button-black{
+        letter-spacing: .2px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .button-select > .button-black {
+        font-size: 13px;
+        width: 110px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .plan-title{
+        padding-top: 0;
+        line-height: 0px;
+        margin-bottom: 0;
+        letter-spacing: .6px;
+        font-size: 22px;
+        height: 0;
+        margin-top: 52px;
+    }
+    .plan{
+        margin: 40px 44px 0px;
+    }
+    .content-plan > div > div {
+        line-height: 0;
+        font-size: 22px;
+        letter-spacing: .6px;
+        margin-bottom: 20px;
+    }
+    .selected-apartment > img {
+        width: 100%;
+    }
+    .selected-apartment > .description {
+        width: 100%;
+        display: block;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .copyright{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+    .selected-apartment > .description > .nav-tabs li a {
+        font-size: 13px;
+        padding: 15px 0px;
+    }
+    .selected-apartment > .description > .nav-tabs li:nth-child(2), .selected-apartment > .description > .nav-tabs li:nth-child(2) > a {
+        display: none;
+    }
+    .tab-content{
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+
+@media only screen and (min-height: 170px) and (max-height: 363px) and (orientation: landscape) {
+    ::-webkit-scrollbar-button {
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:6px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color:transparent;
+        box-shadow:0px 0px 3px #000 inset;
+    }
+
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: rgba(130, 130, 130, 0.81);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: rgba(84, 84, 84, 0.59);
+        box-shadow:1px 1px 1px #fff inset;
+        background-image:url('http://www.west-villa.com.ua/wp-content/themes/structure/library/photo/scroll.png');
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+
+    ::-webkit-resizer{
+        background-image:url('');
+        background-repeat:no-repeat;
+        width:7px;
+        height:0px
+    }
+
+    ::-webkit-scrollbar{
+        width: 13px;
+    }
+    body{
+        padding: 0 30px;
+    }
+    .start-page{
+        width: 40px;
+        height: 40px;
+        background-color: #a87d41;
+    }
+    .start-page > img{
+        width: 20px;
+        height: 20px;
+        margin: 9px;
+    }
+    .button-select{
+        margin-top: 30px;
+    }
+    .button-black{
+        letter-spacing: .2px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+    .button-select > .button-black {
+        font-size: 13px;
+        width: 110px;
+        height: 32px;
+        line-height: 32px;
+    }
+    .plan-title{
+        padding-top: 0;
+        line-height: 0px;
+        margin-bottom: 0;
+        letter-spacing: .6px;
+        font-size: 22px;
+        height: 0;
+        margin-top: 52px;
+    }
+    .plan{
+        margin: 40px 44px 0px;
+    }
+    .content-plan > div > div {
+        line-height: 0;
+        font-size: 22px;
+        letter-spacing: .6px;
+        margin-bottom: 20px;
+    }
+    .selected-apartment > img {
+        width: 100%;
+    }
+    .selected-apartment > .description {
+        width: 100%;
+        display: block;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .copyright{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+    .selected-apartment > .description > .nav-tabs li a {
+        font-size: 13px;
+        padding: 15px 0px;
+    }
+    .selected-apartment > .description > .nav-tabs li:nth-child(2) {
+        margin-left: 20%;
+    }
+    .tab-content{
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+

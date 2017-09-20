@@ -1,0 +1,509 @@
+body {
+    padding: 31px;
+    height: 100vh;
+    transition: padding 1.5s ease-in-out !important;
+    background-color: #000715;
+    box-sizing: border-box;
+    font-family: roboto;
+    margin: 0;
+}
+.start-page {
+    position: fixed;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    background-color: #000715;
+    box-sizing: border-box;
+}
+.start-page > img {
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    margin: 11px;
+    display: block;
+    transition: transform .2s ease-in-out;
+}
+.start-page:hover > img {
+    transform: rotate(90deg);
+}
+.page-loaded .wrapper-frame {
+    transform: scaleY(1);
+    transition: transform .5s ease-in-out !important;
+}
+.wrapper-frame {
+    transform: scaleY(.75);
+    outline: #fff solid 1px;
+    outline-offset: 9px;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+.map-content.size{
+    background: #000715;
+}
+.map-content.size:before {
+    display: block;
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    left: -15%;
+    top: 0;
+    content: '';
+    z-index: 10;
+    background: linear-gradient(to left, rgb(4, 6, 17) 0%, rgba(141, 147, 163, 0) 100%);
+}
+.path.size{
+    /*background-color: rgba(4, 6, 17, 0.74);*/
+}
+#map:before{
+    background: transparent;
+}
+.map-wrapper{
+    background: #040611;;
+}
+.background > img{
+    position: absolute;
+    right: 36%;
+    bottom: 0;
+    height: 80%;
+    opacity: .2;
+}
+.c-title > h1, .c-address > p{
+    color: #a0a0a0;
+    margin: 0;
+
+}
+.logo-contact{
+    height: 125px;
+    width: auto;
+    margin-left: 64px;
+    margin-top: 1.5%;
+}
+.c-title{
+    margin-left: 80px;
+}
+.c-title > h1{
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 7px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: #6b5829;
+}
+.c-address{
+    margin-left: 80px;
+    /*margin-top: 100px;*/
+}
+.c-address > p{
+    font-size: 22px;
+    font-weight: 100;
+}
+.gm-fullscreen-control{
+    /*display: none;*/
+    /*width: 0% !important;*/
+}
+.gm-style > div:nth-child(7){
+    display:none;
+}
+.wpcf7{
+    margin-left: 80px;
+}
+input{
+    margin-bottom: 8px;
+    background-color: rgb(0, 7, 21);
+    padding: 5px;
+    border: solid 1px #a0a0a0;
+    box-sizing: border-box;
+    width: 100%;
+    color: #c3c3c3;
+    font-family: roboto;
+    font-weight: 300;
+    letter-spacing: .8px;
+}
+input {outline: none;}
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px rgb(0, 7, 21) !important;
+    -webkit-text-fill-color: #c3c3c3 !important;
+    color: #c3c3c3 !important;
+}
+
+textarea{
+    background-color: rgb(0, 7, 21);
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 5px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+.screen-reader-response, .wpcf7-not-valid-tip{
+    display: none;
+}
+.wpcf7 > form > p:nth-child(2) {
+    margin-bottom: 0;
+}
+.wpcf7 > form > p{
+    margin-top: 4px;
+}
+.wpcf7-response-output {
+    width: 400px;
+    color: #802525;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+.wpcf7-submit{
+    margin-top: 8px;
+    font-family: roboto;
+    font-weight: 300;
+    color: #d6d6d6;
+    width: 55%;
+    margin-bottom: 3px;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+form{
+    width: 50%;
+}
+.contact-title{
+    color: #b7964c;
+    margin-left: 80px;
+    width: 50%;
+    font-weight: 300;
+    font-size: 11px;
+    margin-top: 16%;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+}
+
+
+@media only screen and (min-width: 1900px)  {
+    .contact-title {
+        width: 72%;
+        margin-right: 0;
+        font-size: 16px;
+    }
+    form {
+        width: 60%;
+    }
+    .c-title > h1 {
+        font-size: 44px;
+    }
+    .c-address > p {
+        font-size: 17px;
+        font-weight: 100;
+    }
+    .contact-title {
+        margin-top: 2%;
+    }
+    .logo-contact {
+        height: 240px;
+        margin-top: 0px;
+    }
+    .path {
+        left: 0;
+    }
+    textarea {
+        height: 76px;
+    }
+    .c-title > h1 {
+        margin-top: 8px;
+    }
+    .wpcf7-submit {
+        width: 54%;
+        font-size: 11px;
+    }
+    .c-address > p {
+        font-size: 24px;
+        font-weight: 100;
+        line-height: 36px;
+    }
+    .contact-title {
+        margin-top: 28%;
+    }
+    textarea {
+        height: 200px;
+    }
+    input {
+        padding: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+    .contact-title {
+        width: 72%;
+        margin-right: 0;
+    }
+    form {
+        width: 88%;
+    }
+    .c-address > p {
+        font-size: 17px;
+        font-weight: 100;
+    }
+    .contact-title {
+        margin-top: 2%;
+    }
+    .logo-contact {
+        height: 100px;
+        margin-top: 0px;
+    }
+    .path {
+        left: -6%;
+    }
+    textarea {
+        height: 76px;
+    }
+    .c-title > h1 {
+        margin-top: 8px;
+    }
+    .wpcf7-submit {
+        width: 54%;
+        font-size: 11px;
+    }
+    .c-address > p {
+        line-height: 22px;
+    }
+    .contact-title {
+        margin-top: 28%;
+    }
+}
+
+
+
+@media only screen and (min-width: 483px) and (max-width: 800px) {
+    .contact-title {
+        width: 72%;
+        margin-right: 0;
+    }
+    form {
+        width: 88%;
+    }
+    .c-address > p {
+        font-size: 17px;
+        font-weight: 100;
+    }
+    .contact-title {
+        margin-top: 2%;
+    }
+    .logo-contact {
+        height: 100px;
+        margin-top: 0px;
+    }
+    .path {
+        left: -6%;
+    }
+    textarea {
+        height: 76px;
+    }
+    .c-title > h1 {
+        margin-top: 8px;
+    }
+    .wpcf7-submit {
+        width: 54%;
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 367px) and (max-width: 482px){
+    body{
+        padding: 0;
+    }
+    .start-page{
+        left: 0% !important;
+    }
+    .logo-contact {
+        height: 100px;
+    }
+    .path.size{
+        float: none;
+        margin: 2% auto 0 auto;
+        width: 80%;
+        height: 65%;
+        transform: scale(1) !important;
+    }
+    .path > img, .path > .c-title, .path > .c-address, .path > .wpcf7 {
+        margin: 0;
+    }
+    .c-title > h1 {
+        margin-top: 12px;
+        font-size: 20px;
+    }
+    .c-address > p {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 22px;
+    }
+    .path > .contact-title {
+        margin: 64px 0 0 0px;
+    }
+    .contact-title {
+        width: 100%;
+    }
+    .wpcf7 > form{
+        width: 100%;
+    }
+    .map-content{
+        height: 30%;
+    }
+    .wpcf7-submit {
+        width: 60%;
+    }
+}
+
+
+
+@media only screen and (min-width: 322px) and (max-width: 366px){
+    body{
+
+        padding: 0;
+    }
+    .wrapper-frame > .map-wrapper{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .start-page{
+        left: 0% !important;
+    }
+    .logo-contact {
+        height: 100px;
+    }
+    .path.size{
+        float: none;
+        margin: 10% auto 0 13%;
+        width: 80%;
+        height: 88%;
+        transform: scale(1) !important;
+    }
+    .path > img, .path > .c-title, .path > .c-address, .path > .wpcf7 {
+        margin: 0;
+    }
+    .c-title > h1 {
+        margin-top: 12px;
+        font-size: 20px;
+    }
+    .c-address > p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+    }
+    .path > .contact-title {
+        margin: 20px 0 0 0px;
+        font-size: 9px;
+    }
+    .contact-title {
+        width: 100%;
+    }
+    .wpcf7 > form{
+        width: 100%;
+    }
+    .map-content{
+        height: 50%;
+        margin-top: 40px;
+    }
+    .wpcf7-submit {
+        width: 56%;
+    }
+    input{
+        padding: 4px;
+    }
+    #wpcf7-f75503-o1 > form > p > input{
+        font-size: 11px;
+    }
+    .map-content{
+        z-index: 1;
+    }
+    .path.size {
+        z-index: 55;
+    }
+    .wpcf7-response-output {
+        color: rgba(128, 37, 37, 0.53);
+        letter-spacing: .8px;
+    }
+}
+@media only screen and (min-width: 238px) and (max-width: 321px){
+    body{
+        padding: 0;
+    }
+    .wrapper-frame > .map-wrapper{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .start-page{
+        left: 0% !important;
+        width: 30px;
+        height: 30px;
+        border-color: rgba(255, 255, 255, 0.53);
+    }
+    .start-page > img{
+        width: 15px;
+        height: 15px;
+        margin: 6px;
+    }
+    .logo-contact {
+        height: 84px;
+    }
+    .path.size{
+        float: none;
+        margin: 10% auto 0 13%;
+        width: 80%;
+        height: 88%;
+        transform: scale(1) !important;
+    }
+    .path > img, .path > .c-title, .path > .c-address, .path > .wpcf7 {
+        margin: 0;
+    }
+    .c-title > h1 {
+        margin-top: 12px;
+        font-size: 20px;
+    }
+    .c-address > p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+    }
+    .path > .contact-title {
+        margin: 20px 0 0 0px;
+        font-size: 9px;
+    }
+    .contact-title {
+        width: 100%;
+    }
+    .wpcf7 > form{
+        width: 100%;
+    }
+    .map-content{
+        height: 50%;
+        margin-top: 40px;
+    }
+    .wpcf7-submit {
+        width: 80%;
+    }
+    input{
+        padding: 3px;
+    }
+    #wpcf7-f75503-o1 > form > p > input{
+        font-size: 11px;
+    }
+    .map-content{
+        z-index: 1;
+    }
+    .path.size {
+        z-index: 55;
+    }
+    .wpcf7-response-output {
+        color: rgba(128, 37, 37, 0.53);
+        letter-spacing: .8px;
+    }
+}

@@ -1,0 +1,482 @@
+body{
+    font-family: roboto;
+}
+.map-wrapper{
+    height: 100%;
+    position: relative;
+}
+.map-content{
+    position: relative;
+    float: left;
+}
+.background>img{
+    height: 100%;
+}
+.path{
+    height: 100%;
+    width: 54.333333%;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+}
+.points.logo{
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.logo>img{
+    height: 100%;
+    width: 100%;
+}
+.path .line{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    margin-top: 27px;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    transform-origin: 50% -27px;
+}
+.path .line.p1{
+    height: 170px;
+    transform: rotate(-43deg);
+    animation-delay: 1s;
+}
+.path .line .point{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.35);
+}
+.path .line .point:before{
+    display: block;
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+.path .line .point span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    height: 60px;
+    white-space: nowrap;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin: -20px 0 0 20px;
+    padding: 10px;
+    border: 1px solid transparent;
+    transition: .2s;
+    transform-origin: -30px 50%;
+    box-sizing: border-box;
+}
+.path .line.p1 .point span{
+    transform: rotate(43deg);
+}
+.path .line .point span:before{
+    display: block;
+    content: '';
+    width: 20px;
+    height: 0;
+    border-top: 1px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+}
+
+.path .line .point span i{
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    transition: .2s;
+}
+.line:hover .point span i {
+    font-size: 12px;
+}
+.path .line.p2{
+    height: 150px;
+    transform: rotate(-177deg);
+}
+.path .line.p2 .point span {
+    transform: rotate(150deg);
+}
+.path .line.p3{
+    height: 120px;
+    transform: rotate(-135deg);
+    animation-delay: 0.2s;
+}
+.path .line.p3 .point span {
+    transform: rotate(135deg);
+}
+.path .line.p4{
+    height: 83px;
+    transform: rotate(-101deg);
+    animation-delay: 0.4s;
+}
+.path .line.p4 .point span {
+    transform: rotate(100.7deg);
+}
+.path .line.p5{
+    height: 113px;
+    transform: rotate(-72deg);
+    animation-delay: 0.8s;
+}
+.path .line.p5 .point span {
+    transform: rotate(72deg);
+}
+.path .line.p6{
+    height: 50px;
+    transform: rotate(1deg);
+    animation-delay: 1s;
+}
+.path .line.p6 .point span {
+    transform: rotate(-1deg);
+    transform-origin: 130% 50%;
+}
+.path .line.p7{
+    height: 90px;
+    transform: rotate(20deg);
+}
+.path .line.p7 .point span {
+    transform: rotate(-20deg);
+    transform-origin: 120% 50%;
+}
+.path .line.p8{
+    height: 50px;
+    transform: rotate(181deg);
+}
+.path .line.p8 .point span {
+    transform: rotate(-181deg);
+    transform-origin: 132% 50%;
+    animation-delay: 3s;
+}
+.path .line.p9{
+    height: 24px;
+    transform: rotate(90deg);
+    animation-delay: 1.2s;
+}
+.path .line.p9 .point span {
+    transform: rotate(-90deg);
+    transform-origin: 146% 50%;
+}
+
+.path .line:hover, .path .line:active {
+    border-left: 1px dashed #cea94e;
+}
+.points .line:hover .point, .points .line:active .point,.points .line:hover .point span:before{
+    border-color: #cea94e;
+}
+.points .line:hover .point span{
+    color: rgba(255, 255, 255, 0.85);
+    border-color: #cea94e;
+    font-size: 20px;
+}
+.path .line:hover .point:before {
+    background-color: #ffffff;
+}
+.path .line .point.invers span:before {
+    right: auto;
+    left: 100%;
+}
+.path .line .point.invers span{
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: 21px;
+}
+/*--- Map Content ---*/
+#map {
+    height: 100%;
+    width: 100%;
+    opacity: .75;
+}
+#map > div{
+    background: transparent !important;
+}
+#map:before {
+    display: block;
+    width: 22%;
+    height: 100%;
+    position: absolute;
+    left: -1px;
+    top: 0;
+    content: '';
+    z-index: 10;
+    background: linear-gradient(to right, rgb(4, 6, 17) 0%, rgba(141, 147, 163, 0) 100%);}
+.map-content{
+    height: 100%;
+    width: 45.666667%;
+}
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000715;
+}
+.gm-svpc,.gmnoprint.gm-style-cc,.gm-style > div:nth-child(7) {
+    display: none !important;
+}
+/* --- animate--- */
+.path .line{
+    opacity: 0;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    visibility: visible;
+    animation-delay: 0.8s;
+    animation-name: fadeIn;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+}
+
+
+@media screen and (max-width: 1920px) and (min-width: 1680px){
+    .points.logo {
+        transform: scale(1.2);
+    }
+}
+@media screen and (max-width: 1366px) and (min-width: 1280px){
+    .points.logo {
+        transform: scale(0.90);
+    }
+    .points.logo {
+        left: 48%;
+    }
+}
+@media screen and (max-width: 1280px) and (min-width: 1080px){
+    .points.logo {
+        transform: scale(0.75);
+    }
+    .points.logo {
+        left: 48%;
+    }
+    .background>img {
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 960px){
+    body{
+        /*display: none !important;*/
+        padding: 34px !important;
+    }
+    .wrapper-frame {
+        outline: rgba(255, 255, 255, 0.63) solid 1px !important;
+    }
+
+    .points.logo {
+        transform: scale(0.8);
+    }
+
+    .points.logo {
+        left: 36%;
+    }
+
+    .background > img {
+        /*height: 0;*/
+    }
+    .start-page {
+        width: 48px !important;
+        height: 48px !important;
+        border-color: rgba(255, 255, 255, 0.68) !important;
+    }
+
+    .start-page > img {
+        width: 22px !important;
+        height: 22px !important;
+        margin: 12px !important;
+    }
+
+    #map > div > div > div:nth-child(10) {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 959px) and (min-width: 482px) {
+    body{
+    /*display: none !important;*/
+        padding: 34px !important;
+    }
+    .wrapper-frame {
+        outline: rgba(255, 255, 255, 0.63) solid 1px !important;
+    }
+
+    .points.logo {
+        transform: scale(0.6);
+    }
+
+    .points.logo {
+        left: 36%;
+    }
+
+    .background > img {
+        /*height: 0;*/
+    }
+    .start-page {
+        width: 40px !important;
+        height: 40px !important;
+        border-color: rgba(255, 255, 255, 0.54) !important;
+    }
+
+    .start-page > img {
+        width: 19px !important;
+        height: 19px !important;
+        margin: 10px !important;
+    }
+
+    #map > div > div > div:nth-child(10) {
+        display: none;
+    }
+}
+
+
+@media only screen   and (min-width: 393px) and (max-width: 481px) {
+    body{
+        padding: 0;
+    }
+.wrapper-frame > .map-wrapper{
+    /*overflow-y: scroll;*/
+}
+.background{
+    height: 50%;
+}
+
+    .map-wrapper > .path{
+        width: 68%;
+        height: 50%;
+        transform: scale(.58) !important;
+        top: 4%;
+    }
+    .points-logo{
+        left: 30%;
+    }
+    .map-content{
+        width: 100%;
+        height: 50%;
+        background: #000715;
+    }
+    .start-page{
+        width: 30px !important;
+        height: 30px !important;
+        transform: translateY(calc(-50% - 21px)) !important;
+        left: 3% !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+    }
+    .start-page > img{
+        width: 10px !important;
+        height: 10px !important;
+        margin: 9px !important;
+    }
+    .wrapper-frame{
+        transform: scale(1.1) !important;
+    }
+    #map > div > div > div:nth-child(8) > div.gmnoprint{
+        position: relative !important;
+        left: -40px !important;
+        top: -24px !important;
+    }
+    #map > div > div > div:nth-child(10){
+        display: none;
+    }
+    #map:before{
+        background: transparent;
+    }
+}
+
+
+
+
+
+@media only screen   and (min-width: 318px) and (max-width: 392px){
+    body{
+        /*display: none !important;*/
+        padding: 0;
+    }
+    .wrapper-frame > .map-wrapper{
+        /*overflow-y: scroll;*/
+    }
+    .background{
+        height: 50%;
+    }
+
+    .map-wrapper > .path{
+        width: 68%;
+        height: 50%;
+        transform: scale(.58) !important;
+        top: 2%;
+    }
+    .points-logo{
+        left: 30%;
+    }
+    .map-content{
+        width: 100%;
+        height: 50%;
+        background: #000715;
+    }
+    .start-page{
+        width: 30px !important;
+        height: 30px !important;
+        transform: translateY(calc(-50% - 15px)) !important;
+        left: 3% !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
+    }
+    a > .start-page{
+        background-color: #000715 !important;
+    }
+    .start-page > img{
+        width: 10px !important;
+        height: 10px !important;
+        margin: 9px !important;
+    }
+    .wrapper-frame{
+        transform: scale(1.1) !important;
+    }
+    #map > div > div > div:nth-child(8) > div.gmnoprint{
+        position: relative !important;
+        left: -14px !important;
+        top: 4px !important;
+    }
+    #map > div > div > div:nth-child(10){
+        display: none;
+    }
+    #map:before{
+        background: transparent;
+    }
+    }
+
+
