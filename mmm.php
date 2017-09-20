@@ -10,3 +10,6 @@ include get_template_directory() . '/house/floor-'.$imageType.'-svg.php'; ?>
 <a href="#apartment-1" class="flat-button" data-flat="<?php echo 10 + (3 * ($floor - 1)) ?>" data-flattype="1-1"> <!-- KVARTIRA  -->
 
     $flatNum
+
+
+    $flatNum $flatNum $flatNum $flatNum $flatNum $flatNum $flatNum
